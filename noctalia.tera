@@ -1,0 +1,69 @@
+---
+whiskers:
+  version: ^2.0.0
+  matrix:
+    - accent
+    - flavor
+  filename: "themes/evergarden-{{flavor.identifier}}-{{accent}}.json"
+---
+{% set accent = flavor.colors[accent] %}
+{
+{%- if flavor.dark %}
+  "dark": {
+{%- else %}
+  "light": {
+{%- endif %}
+    "mPrimary": "#{{accent.hex}}",
+{%- if accent.identifier != "pink" %}
+    "mSecondary": "#{{pink.hex}}",
+{%- else %}
+    "mSecondary": "#{{skye.hex}}",
+{%- endif %}
+{%- if accent.identifier != "skye" %}
+    "mTertiary": "#{{skye.hex}}",
+{%- else %}
+    "mTertiary": "#{{green.hex}}",
+{%- endif %}
+    "mOnPrimary": "#{{crust.hex}}",
+    "mOnSecondary": "#{{crust.hex}}",
+    "mOnTertiary": "#{{crust.hex}}",
+    "mError": "#{{red.hex}}",
+    "mOnError": "#{{crust.hex}}",
+    "mSurface": "#{{mantle.hex}}",
+    "mOnSurface": "#{{text.hex}}",
+    "mSurfaceVariant": "#{{base.hex}}",
+    "mOnSurfaceVariant": "#{{subtext0.hex}}",
+    "mOutline": "#{{surface1.hex}}",
+    "mShadow": "#{{crust.hex}}",
+    "mHover": "#{{surface1.hex}}",
+    "mOnHover": "#{{text.hex}}",
+    "terminal": {
+      "background": "#{{base.hex}}",
+      "foreground": "#{{text.hex}}",
+      "cursor": "#{{text.hex}}",
+      "cursorText": "#{{crust.hex}}",
+      "selectionBg": "#{{text.hex}}",
+      "selectionFg": "#{{crust.hex}}",
+      "normal": {
+        "black": "#{{surface1.hex}}",
+        "red": "#{{red.hex}}",
+        "green": "#{{green.hex}}",
+        "yellow": "#{{yellow.hex}}",
+        "blue": "#{{blue.hex}}",
+        "magenta": "#{{purple.hex}}",
+        "cyan": "#{{skye.hex}}",
+        "white": "#{{subtext0.hex}}"
+      },
+      "bright": {
+        "black": "#{{overlay1.hex}}",
+        "red": "#{{red.hex}}",
+        "green": "#{{green.hex}}",
+        "yellow": "#{{yellow.hex}}",
+        "blue": "#{{blue.hex}}",
+        "magenta": "#{{pink.hex}}",
+        "cyan": "#{{skye.hex}}",
+        "white": "#{{subtext1.hex}}"
+      }
+    }
+  }
+}
