@@ -42,7 +42,7 @@
 
 1. Download the variant of your choice from `themes/` to your
    [noctalia palette directory](https://docs.noctalia.dev/noctalia/theming/palette/#custom-palette-files)
-   (usually `~/.config/noctalia/palettes/`)
+   (usually `$XDG_CONFIG_HOME/noctalia/palettes/`)
 2. Select the theme in the noctalia settings panel.
 
 ### Thanks to <3
@@ -52,7 +52,7 @@
 <hr>
 
 <p align="center">
-  <a href="https://codeberg.org/evergarden/noctalia/src/COPYING">
-    <img src="https://img.shields.io/static/v1.svg?style=for-the-badge&label=LICENSE&message=APACHE-2.0&colorA=2B3337&colorB=AFD9E6"/>
+  <a href="https://codeberg.org/evergarden/noctalia/src/LICENSE">
+    <img src="https://img.shields.io/static/v1.svg?style=for-the-badge&label=LICENSE&message=Apache-2.0&colorA=2B3337&colorB=AFD9E6"/>
   </a>
 </p>
